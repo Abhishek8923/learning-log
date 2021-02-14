@@ -131,3 +131,10 @@ LOGIN_URL='users:login'
 # heroku seetings
 import django_heroku
 django_heroku.settings(locals())
+
+#setting environment variable
+if os.environ.get('DEBUG')=='TRUE':
+    DEBUG=True
+elif os.environ.get('DEBUG')=='FALSE':
+    DEBUG=False
+    
